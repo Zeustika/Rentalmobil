@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/f6a5e59c-28b5-48af-a798-ebe941c104c1)## 🚗 Car Rental System - PHP & MySQL
+## 🚗 Car Rental System - PHP & MySQL
 
 A simple web-based **Car Rental Management System** built with **PHP** and **MySQL**. This project helps manage car bookings, customer data, and rental transactions in a structured and efficient way.
 
