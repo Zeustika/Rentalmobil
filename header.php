@@ -101,6 +101,39 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     }
                     ?>
                 </ul>
+                <!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Daftar Akun Baru</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="koneksi/proses.php?id=daftar">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" name="nama" id="nama" class="form-control" placeholder="Masukkan nama lengkap" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="username_daftar">Username</label>
+                        <input type="text" name="user" id="username_daftar" class="form-control" placeholder="Masukkan username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password_daftar">Password</label>
+                        <input type="password" name="pass" id="password_daftar" class="form-control" placeholder="Masukkan password" required>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-primary">Daftar</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
                 
                 <ul class="navbar-nav ml-auto user-nav">
                     <?php if(!empty($_SESSION['USER'])): ?>
@@ -124,7 +157,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn-register1" href="index.php">
+                            <a class="nav-link btn-register1" href="index.php" data-toggle="modal" data-target="#modelId">
                                 <i class="fa fa-user-plus mr-1"></i> Register
                             </a>
                         </li>
